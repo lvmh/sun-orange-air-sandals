@@ -1,0 +1,16 @@
+ <ng-include src="'partials/header-nav.html'"></ng-include>
+      <div class="container container-main">
+        <div class="page-content">
+       <div class="jumbotron">
+          <div ng-hide="user.authenticated">
+            <h1>Gummon an sign up boi!</h1>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" href="#/login" role="button">Sign Up</a></p>
+          </div>
+          <div ng-show="user.authenticated">
+            <h1>Seig sole!!!!!!!!</h1> <p>Welcome {{ user.first_name }}!</p>
+          </div>
+          yoza!
+        </div>
+        </div>
+      </div>

@@ -1,11 +1,14 @@
-<h4 class="blog-post-title">Products</h4>
+ <ng-include src="'partials/header-nav.html'"></ng-include>
+      <div class="container container-main">
+        <div class="page-content"><h1 class="blog-post-title">Products</h4>
 <hr/>
-<button type="button" class="btn btn-danger" ng-click="open(product);"><i class="fa fa-plus"></i> Add New Product</button>
+<div class="action-buttons">
+<button type="button" class="btn btn-warning " ng-click="open(product);"><i class="fa fa-plus"></i> Add New Product</button>
+</div>
 
 <div class="table-responsive">
-<div class="panel panel-primary">
-  <div class="panel-heading">List of products
-      <div class="sw-search" >
+<div class="panel">
+  <div class="panel-heading"><div class="sw-search" >
             <div class="nav-search" id="nav-search">
                     Filter: <div class="input-icon has-feedback">
                         <input placeholder="Filter products list ..." class="nav-search-input form-control" ng-model="filterProduct" ng-change="resetLimit();"  autocomplete="off" type="text" focus>
@@ -15,7 +18,7 @@
         </div>
     </div>
   <div class="panel-body">
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
     <tr ng-show="products.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;No data found</td></tr>
     <tr ng-hide="products.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
 
@@ -34,6 +37,8 @@
         </td>
     </tr>
     </table>
+</div>
+</div>
 </div>
 </div>
 </div>

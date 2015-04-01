@@ -1,0 +1,29 @@
+<ng-include src="'partials/solo-styles.html'"></ng-include>
+<div class="vcent">
+	<div class="container">
+	<div class=" col-md-2">
+
+	<form ua-login>
+	<img class="cute" src="images/login.png">
+	<div class="form-group social-logins">
+	<a href="" class="btn btn-warning" ua-oauth-link="facebook">Login with Facebook</a>
+	<div><span class="line"></span><span class="or">or</span>
+	</div>
+	</div>
+		<div class="form-group has-feedback">
+		<input name="login" class="form-control" type="email" placeholder="Email"><i class="fa form-control-feedback fa-envelope"></i>
+		</div>
+		<div class="form-group has-feedback">
+		<input name="password" placeholder="Password" class="form-control" type="password"><a href="#/reset-password/" class="form-control-feedback" type="button" title="Forgot your password?"><i class="fa fa-question"></i></a>
+		</div>
+		<div class="form-group">
+		<p><button type="submit" class="btn">Log in</button> or <a class="btn btn-or" href="#/signup">Sign up</a></p>
+
+	</div>
+		<p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
+		<p ng-show="error">{{ error.message }}</p>
+	</form>
+	</div>
+	</div>
+
+</div>
