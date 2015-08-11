@@ -1,7 +1,5 @@
-    <button type="button" class="close" ng-click="cancel();">
-        <i class="fa fa-times-circle-o"></i>
-    </button>
     <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
         <h3 class="modal-title">Edit product [ID: {{product.id}}]</h3>
     </div>
     <div class="modal-body">
@@ -27,19 +25,15 @@
                 <small class="errorMessage" ng-show="product_form.packing.$dirty && product_form.packing.$invalid"> Enter the Packing.</small>
             </form-element>
 
-            <div class="space"></div>
-            <div class="space-4"></div>
             <div class="modal-footer">
                 <form-element label="">
-                    <div class="text-right">
-                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i> Cancel</a>
+        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i> Cancel</a>
                         <button ng-click="saveProduct(product);"
                                 ng-disabled="product_form.$invalid || enableUpdate"
                                 class="btn btn-sm btn-primary"
                                 type="submit">
                             <i class="ace-icon fa fa-check"></i> {{buttonText}}
                         </button>
-                    </div>
                 </form-element>
             </div>
         </form>

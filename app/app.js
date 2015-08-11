@@ -17,6 +17,21 @@ app.config(['$routeProvider',
       templateUrl: 'partials/products.html',
       controller: 'productsCtrl'
     });
+    $routeProvider.when('/orders', {
+      title: 'Orders',
+      templateUrl: 'partials/orders.html',
+      controller: 'ordersCtrl'
+    });
+    $routeProvider.when('/customers', {
+      title: 'Customers',
+      templateUrl: 'partials/customers.html',
+      controller: 'customersCtrl'
+    });
+    $routeProvider.when('/contact', {
+      title: 'Contact Us',
+      templateUrl: 'partials/contact.html',
+      controller: 'contactCtrl'
+    });
     $routeProvider.when('/login', {
       templateUrl: 'partials/login.html',
       login: true
